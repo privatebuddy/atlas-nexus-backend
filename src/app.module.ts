@@ -6,7 +6,11 @@ import { ConfigModule } from '@nestjs/config';
 import { LineModule } from './line/line.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), AssistantModule, LineModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    AssistantModule,
+    LineModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

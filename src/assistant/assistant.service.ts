@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
 import { image_assistance_role, text_assistance_role } from './constants';
 import { ConfigService } from '@nestjs/config';
-
 @Injectable()
 export class AssistantService {
   openAI: OpenAI;
@@ -30,7 +29,6 @@ export class AssistantService {
 
     return chat.choices[0].message.content;
   }
-
   async handleImageCompletion(base64Image: string): Promise<string> {
     const response = await this.openAI.chat.completions.create({
       model: 'gpt-4o-mini',
