@@ -64,3 +64,5 @@ Verification Status: [Existence/Correctness Status]
 
 If the product details are correct and exist, confirm the availability. If not, provide an appropriate response indicating the issue. You will answer in Thai`,
 };
+
+export const USER_MODEL = 'USER_MODEL';
